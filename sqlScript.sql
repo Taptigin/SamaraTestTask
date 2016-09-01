@@ -20,7 +20,7 @@ create table orderDetails
 (ID bigint primary key not null,
  ProductSerialNumber varchar(120),
  ProductName varchar(60),
- Anount int,
+ Amount int,
  OrderID bigint references orderTable(ID) not null);
 
 create SEQUENCE orderDetailsSeq
