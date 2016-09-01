@@ -9,6 +9,7 @@
    <f:view>
       <h:head>
          <title>Samara test</title>
+
       </h:head>
 
       <h:body>
@@ -18,7 +19,7 @@
 
          <h:form>
             <h:dataTable value="#{mainBean.orders}" var="order"
-                         >
+                         border="5" style="align-content: center">
                <h:column>
                   <f:facet name="header">Имя заказчика</f:facet>
                   #{order.customerName}
