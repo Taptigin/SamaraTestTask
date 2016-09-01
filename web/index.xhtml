@@ -10,35 +10,35 @@
       <h:head>
          <title>Samara test</title>
       </h:head>
-      <h:outputLabel value="Hello, world"/>
+
       <h:body>
-         <h:panelGrid title="JSF panelGrid Title" border="10" columns="2">
 
-            <h:outputLabel value="JSF standart label"/>
-            <h:button value="JSF default button" title="JSF button Title" outcome="nextPage"/>
 
-         </h:panelGrid>
 
-         <br/>
 
-         <!-- Без формы компоненты работать не будут -->
          <h:form>
-            <p:panel header="PrimeFaces Components">
-               <p:outputLabel for="inputTextId" value="Введите значение: "/>
-
-               <p:inputText id="inputTextId" title="Binding with ManagedBean"
-                            value="#{mainBean.inputText}">
-               </p:inputText>
-               <p:outputLabel value="#{mainBean.qqq}"/>
-
-               <br/>
-
-               <p:commandButton value="GO to next page" action="nextPage"/>
-
-            </p:panel>
-            <p:outputLabel value="#{mainBean.qqq}"/>
+            <h:dataTable value="#{mainBean.orders}" var="order"
+                         >
+               <h:column>
+                  <f:facet name="header">Имя заказчика</f:facet>
+                  #{order.customerName}
+               </h:column>
+               <h:column>
+                  <f:facet name="header">Адрес заказчика</f:facet>
+                  #{order.customerAddress}
+               </h:column>
+               <h:column>
+                  <f:facet name="header">Общая сумма заказа</f:facet>
+                  #{order.totalAmount}
+               </h:column>
+               <h:column>
+                  <f:facet name="header">Дата создания</f:facet>
+                  #{order.createdDate}
+               </h:column>
+            </h:dataTable>
          </h:form>
-         <p:outputLabel value="#{mainBean.qqq}"/>
+
+
       </h:body>
    </f:view>
 </html>

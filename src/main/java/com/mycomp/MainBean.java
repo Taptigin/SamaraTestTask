@@ -1,5 +1,6 @@
 package com.mycomp;
 
+import com.mycomp.models.Order;
 import com.mycomp.service.OrderService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,6 +10,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import java.util.List;
 
 /**
  * Created by Александр on 01.09.2016.
@@ -23,6 +25,10 @@ public class MainBean {
 
     private String inputText;
     String qqq = service.getOrders().get(0).getCustomerName();
+
+    public List<Order> getOrders(){
+        return service.getOrders();
+    }
 
     public String getInputText() {
         System.out.println(service.getOrders().get(0).getCustomerName());
