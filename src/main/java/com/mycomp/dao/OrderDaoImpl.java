@@ -22,6 +22,8 @@ public class OrderDaoImpl implements OrderDao {
 
         listOrder = em.createQuery("from Order ",Order.class).getResultList();
 
+
+        em.close();
         return listOrder;
     }
 
@@ -32,6 +34,7 @@ public class OrderDaoImpl implements OrderDao {
                 .setParameter("orderId",orderId)
                 .getResultList();
 
+        em.close();
         return listDetail;
     }
 }

@@ -1,7 +1,12 @@
 package com.mycomp;
 
+import com.mycomp.service.OrderService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
@@ -9,15 +14,23 @@ import javax.faces.context.FacesContext;
  * Created by Александр on 01.09.2016.
  */
 @ManagedBean(name = "mainBean")
-@SessionScoped
+@RequestScoped
+//@SessionScoped
 public class MainBean {
+
+    private ApplicationContext context = new ClassPathXmlApplicationContext("SpringContext.xml");
+    private OrderService service = (OrderService) context.getBean("storageService");
+
     private String inputText;
-    String qqq = "qwerty";
+    String qqq = "123";
+
     public String getInputText() {
+        System.out.println(service.getOrders().get(0).getCustomerName());
         return inputText;
     }
 
     public String getQqq() {
+        System.out.println(service.getOrders().get(0).getCustomerName());
         return qqq;
     }
 
