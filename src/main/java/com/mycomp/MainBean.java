@@ -22,7 +22,7 @@ public class MainBean {
     private OrderService service = (OrderService) context.getBean("storageService");
 
     private String inputText;
-    String qqq = "123";
+    String qqq = service.getOrders().get(0).getCustomerName();
 
     public String getInputText() {
         System.out.println(service.getOrders().get(0).getCustomerName());

@@ -7,7 +7,7 @@ import java.sql.Date;
  * Created by Александр on 01.09.2016.
  */
 @Entity
-@Table(name = "ordertable", schema = "public", catalog = "SamaraTest")
+@Table(name = "ordertable")
 public class Order {
     private Long id;
     private String customerName;

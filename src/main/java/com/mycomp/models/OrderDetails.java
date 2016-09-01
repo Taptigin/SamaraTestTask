@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by Александр on 01.09.2016.
  */
 @Entity
-@Table(name = "orderdetails", schema = "public", catalog = "SamaraTest")
+@Table(name = "orderdetails")
 public class OrderDetails {
     private Long id;
     private String productSerialNumber;
