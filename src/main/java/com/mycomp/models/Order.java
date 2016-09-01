@@ -91,4 +91,15 @@ public class Order {
         result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", customerName='" + customerName + '\'' +
+                ", customerAddress='" + customerAddress + '\'' +
+                ", totalAmount=" + totalAmount +
+                ", createdDate=" + createdDate +
+                '}';
+    }
 }
