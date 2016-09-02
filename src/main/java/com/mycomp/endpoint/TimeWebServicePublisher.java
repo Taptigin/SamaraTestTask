@@ -6,9 +6,17 @@ import com.mycomp.ws.TimeWebServiceImpl;
  */
 
 public class TimeWebServicePublisher {
+    static boolean isStart = false;
     public static void main(String[] args) {
 
-        Endpoint.publish("http://localhost:1986/wss/time", new TimeWebServiceImpl());
+        startTime();
 
+    }
+
+    public static void startTime(){
+        if(!isStart){
+            Endpoint.publish("http://localhost:1986/wss/time", new TimeWebServiceImpl());
+            isStart = true;
+        }
     }
 }

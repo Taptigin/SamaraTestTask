@@ -45,6 +45,7 @@ public class MainBean {
     }
 
     public String getTime() throws MalformedURLException{
+        com.mycomp.endpoint.TimeWebServicePublisher.startTime();
         times = getCurTime().toString();
         return times;
     }
