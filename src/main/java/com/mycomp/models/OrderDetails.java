@@ -24,6 +24,10 @@ public class OrderDetails {
         return id;
     }
 
+    /**
+     * setting id values for the records from the table orderDetails
+     * @param id
+     */
     public void setId(Long id) {
         this.id = id;
     }
@@ -38,6 +42,10 @@ public class OrderDetails {
         return productSerialNumber;
     }
 
+    /**
+     * setting productSerialNumber values for the records from the table orderDetails
+     * @param productSerialNumber
+     */
     public void setProductSerialNumber(String productSerialNumber) {
         this.productSerialNumber = productSerialNumber;
     }
@@ -52,6 +60,10 @@ public class OrderDetails {
         return productName;
     }
 
+    /**
+     * setting productName values for the records from the table orderDetails
+     * @param productName
+     */
     public void setProductName(String productName) {
         this.productName = productName;
     }
@@ -66,8 +78,12 @@ public class OrderDetails {
         return amount;
     }
 
-    public void setAmount(Integer anount) {
-        this.amount = anount;
+    /**
+     * setting amount values for the records from the table orderDetails
+     * @param amount
+     */
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
     /**
@@ -80,6 +96,10 @@ public class OrderDetails {
         return orderId;
     }
 
+    /**
+     * setting orderId values for the records from the table orderDetails
+     * @param orderId
+     */
     public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
