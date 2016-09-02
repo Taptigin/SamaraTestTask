@@ -14,6 +14,10 @@ public class OrderDetails {
     private Integer amount;
     private Long orderId;
 
+    /**
+     *
+     * @return id from table "orderDetails"
+     */
     @Id
     @Column(name = "id")
     public Long getId() {
@@ -24,6 +28,10 @@ public class OrderDetails {
         this.id = id;
     }
 
+    /**
+     *
+     * @return productSerialNumber from table "orderDetails"
+     */
     @Basic
     @Column(name = "productserialnumber")
     public String getProductSerialNumber() {
@@ -34,6 +42,10 @@ public class OrderDetails {
         this.productSerialNumber = productSerialNumber;
     }
 
+    /**
+     *
+     * @return productName from table "orderDetails"
+     */
     @Basic
     @Column(name = "productname")
     public String getProductName() {
@@ -44,6 +56,10 @@ public class OrderDetails {
         this.productName = productName;
     }
 
+    /**
+     *
+     * @return amount from table "orderDetails"
+     */
     @Basic
     @Column(name = "amount")
     public Integer getAmount() {
@@ -54,6 +70,10 @@ public class OrderDetails {
         this.amount = anount;
     }
 
+    /**
+     *
+     * @return orderId from table "orderDetails"
+     */
     @Basic
     @Column(name = "orderid")
     public Long getOrderId() {
