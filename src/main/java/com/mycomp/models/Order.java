@@ -27,6 +27,10 @@ public class Order {
         return id;
     }
 
+    /**
+     * setting id values for the records from the table
+     * @param id
+     */
     public void setId(Long id) {
         this.id = id;
     }
@@ -41,6 +45,10 @@ public class Order {
         return customerName;
     }
 
+    /**
+     * setting customerName values for the records from the table
+     * @param customerName
+     */
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
@@ -55,6 +63,10 @@ public class Order {
         return customerAddress;
     }
 
+    /**
+     * setting customerAddress values for the records from the table
+     * @param customerAddress
+     */
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
     }
@@ -69,6 +81,10 @@ public class Order {
         return totalAmount;
     }
 
+    /**
+     * setting totalAmount values for the records from the table
+     * @param totalAmount
+     */
     public void setTotalAmount(Integer totalAmount) {
         this.totalAmount = totalAmount;
     }
@@ -83,6 +99,10 @@ public class Order {
         return createdDate;
     }
 
+    /**
+     * setting createdDate values for the records from the table
+     * @param createdDate
+     */
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
