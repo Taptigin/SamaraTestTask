@@ -34,7 +34,6 @@ public class MainBean {
     public List<OrderDetails> getDetails(){
         String s = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("orderId");
         orderId = Long.parseLong(s);
-
         return service.getOrderDetails(orderId);
     }
 
