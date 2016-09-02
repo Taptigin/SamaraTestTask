@@ -29,7 +29,8 @@ public class MainBean {
         return service.getOrders();
     }
 
-    public List<OrderDetails> getDetails(Long orderId){
+    public List<OrderDetails> getDetails(){
+        Long orderId = Long.valueOf(1);
         return service.getOrderDetails(orderId);
     }
 

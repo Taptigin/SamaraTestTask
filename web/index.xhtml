@@ -24,14 +24,14 @@
                <h:column>
                   <f:facet name="header">Заказчик</f:facet>
                   #{order.customerName}
-                  <h:dataTable value="#{mainBean.getDetails(order.id)}" var="detail" border="1">
+                  <h:dataTable value="#{mainBean.details}" var="detail" border="1">
                      <h:column>
                         <f:facet name="header">Имя товара</f:facet>
-                        #{mainBean.getDetails(order.id).get(0).productName}
+                        #{detail.productName}
                      </h:column>
                      <h:column>
                         <f:facet name="header">Количество товара</f:facet>
-                        #{mainBean.getDetails(order.id).get(0).anount}
+                        #{detail.anount}
                      </h:column>
                   </h:dataTable>
                </h:column>
