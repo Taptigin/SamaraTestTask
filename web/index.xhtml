@@ -23,7 +23,7 @@
             <h:dataTable value="#{mainBean.orders}" var="order" border="1">
                <h:column>
                   <f:facet name="header">Заказчик</f:facet>
-                  #{order.customerName}
+                  Имя заказчика:  #{order.customerName}.  Адрес заказчика:  #{order.customerAddress}.  Сумма заказа: #{order.totalAmount}.  Дата заказа: #{order.createdDate}.
 
 
                   <!--<f:param name="orderId" value="#{order.id}"/>-->
@@ -40,6 +40,14 @@
                      <h:column>
                         <f:facet name="header">Количество товара</f:facet>
                         #{detail.anount}
+                     </h:column>
+                     <h:column>
+                        <f:facet name="header">Серийный номер</f:facet>
+                        #{detail.productSerialNumber}
+                     </h:column>
+                     <h:column>
+                        <f:facet name="header">Номер заказа</f:facet>
+                        #{detail.orderId}
                      </h:column>
                   </h:dataTable>
                </h:column>
