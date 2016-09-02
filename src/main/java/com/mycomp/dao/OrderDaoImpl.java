@@ -16,7 +16,10 @@ public class OrderDaoImpl implements OrderDao {
     @PersistenceContext
     private EntityManager em;
 
-
+    /**
+     * @see OrderDao
+     * @return
+     */
     public List<Order> getOrders() {
         List<Order> listOrder;
 
@@ -27,6 +30,11 @@ public class OrderDaoImpl implements OrderDao {
         return listOrder;
     }
 
+    /**
+     * @see OrderDao
+     * @param orderId order number
+     * @return
+     */
     public List<OrderDetails> getOrderDetails(long orderId) {
         List<OrderDetails> listDetail;
 
