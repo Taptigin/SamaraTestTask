@@ -46,6 +46,9 @@ public class MainBean {
         return time.getTime();
     }
 
+    /**
+     * method of getting time for a web page
+     */
     public String getTime() throws MalformedURLException{
         com.mycomp.endpoint.TimeWebServicePublisher.startTime();
         times = getCurTime().toString();
@@ -58,10 +61,18 @@ public class MainBean {
         orderId = Long.parseLong(s);
     }
 
+    /**
+     * the method of receiving orders from the database
+     * @return List order
+     */
     public List<Order> getOrders(){
         return service.getOrders();
     }
 
+    /**
+     * method details of the orders
+     * @return List order details
+     */
     public List<OrderDetails> getDetails(){
 
         return service.getOrderDetails(orderId);
