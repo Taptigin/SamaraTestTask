@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
+ * implementation of the service OrderService
+ *
  * Created by Александр on 01.09.2016.
  */
 @Service("storageService")
@@ -17,11 +19,18 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderDao dao;
 
+    /**
+     * @see OrderService
+     * @return
+     */
     public List<Order> getOrders() {
 
         return dao.getOrders();
     }
-
+    /**
+     * @see OrderService
+     * @return
+     */
     public List<OrderDetails> getOrderDetails(long orderId) {
         return dao.getOrderDetails(orderId);
     }
