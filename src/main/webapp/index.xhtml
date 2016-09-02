@@ -26,12 +26,7 @@
                <h:column>
                   <f:facet name="header">Заказчик</f:facet>
                   Имя заказчика:  #{order.customerName}.  Адрес заказчика:  #{order.customerAddress}.  Сумма заказа: #{order.totalAmount}.  Дата заказа: #{order.createdDate}.
-                  #{mainBean.id = order.id}
-
-                  <!--<f:param name="orderId" value="#{order.id}"/>-->
-                  <f:metadata>
-                  <f:viewParam name="orderId" id="orderId" value="#{order.id}"/>
-                  </f:metadata>
+                   Номер заказа: #{mainBean.id = order.id}
 
                   <h:dataTable value="#{mainBean.details}" var="detail" border="1">
                      <h:column>
