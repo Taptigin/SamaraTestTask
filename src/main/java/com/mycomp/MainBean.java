@@ -21,6 +21,8 @@ import com.mycomp.ws.TimeWebService;
 
 
 /**
+ * The Manager bean of the web application
+ *
  * Created by Александр on 01.09.2016.
  */
 @ManagedBean(name = "mainBean")
