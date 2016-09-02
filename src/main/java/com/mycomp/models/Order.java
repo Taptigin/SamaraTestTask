@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
+ * the entity class which the table orders from the database
+ *
  * Created by Александр on 01.09.2016.
  */
 @Entity
@@ -15,6 +17,10 @@ public class Order {
     private Integer totalAmount;
     private Date createdDate;
 
+    /**
+     *
+     * @return id from table "orderTable"
+     */
     @Id
     @Column(name = "id")
     public Long getId() {
@@ -25,6 +31,10 @@ public class Order {
         this.id = id;
     }
 
+    /**
+     *
+     * @return customerName from table "orderTable"
+     */
     @Basic
     @Column(name = "customername")
     public String getCustomerName() {
@@ -35,6 +45,10 @@ public class Order {
         this.customerName = customerName;
     }
 
+    /**
+     *
+     * @return customerAddress from table "orderTable"
+     */
     @Basic
     @Column(name = "customeraddress")
     public String getCustomerAddress() {
@@ -45,6 +59,10 @@ public class Order {
         this.customerAddress = customerAddress;
     }
 
+    /**
+     *
+     * @return totalAmount from table "orderTable"
+     */
     @Basic
     @Column(name = "totalamount")
     public Integer getTotalAmount() {
@@ -55,6 +73,10 @@ public class Order {
         this.totalAmount = totalAmount;
     }
 
+    /**
+     *
+     * @return createdDate from table "orderTable"
+     */
     @Basic
     @Column(name = "createddate")
     public Date getCreatedDate() {
