@@ -31,6 +31,9 @@ public class MainBean {
     private OrderService service = (OrderService) context.getBean("storageService");
     String times;
 
+    /**
+     * a method of obtaining time from the web service
+     */
     Date getCurTime() throws MalformedURLException{
         URL url = new URL("http://localhost:1986/wss/time?wsdl");
         QName qname = new QName("http://ws.mycomp.com/", "TimeWebServiceImplService");
