@@ -11,7 +11,7 @@ public class OrderDetails {
     private Long id;
     private String productSerialNumber;
     private String productName;
-    private Integer anount;
+    private Integer amount;
     private Long orderId;
 
     @Id
@@ -46,12 +46,12 @@ public class OrderDetails {
 
     @Basic
     @Column(name = "amount")
-    public Integer getAnount() {
-        return anount;
+    public Integer getAmount() {
+        return amount;
     }
 
-    public void setAnount(Integer anount) {
-        this.anount = anount;
+    public void setAmount(Integer anount) {
+        this.amount = anount;
     }
 
     @Basic
@@ -75,7 +75,7 @@ public class OrderDetails {
         if (productSerialNumber != null ? !productSerialNumber.equals(that.productSerialNumber) : that.productSerialNumber != null)
             return false;
         if (productName != null ? !productName.equals(that.productName) : that.productName != null) return false;
-        if (anount != null ? !anount.equals(that.anount) : that.anount != null) return false;
+        if (amount != null ? !amount.equals(that.amount) : that.amount != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
 
         return true;
@@ -86,7 +86,7 @@ public class OrderDetails {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (productSerialNumber != null ? productSerialNumber.hashCode() : 0);
         result = 31 * result + (productName != null ? productName.hashCode() : 0);
-        result = 31 * result + (anount != null ? anount.hashCode() : 0);
+        result = 31 * result + (amount != null ? amount.hashCode() : 0);
         result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
         return result;
     }
