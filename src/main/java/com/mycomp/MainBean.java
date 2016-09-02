@@ -19,18 +19,22 @@ import java.util.List;
 @ManagedBean(name = "mainBean")
 @SessionScoped
 public class MainBean {
-
+    Long orderId;
     private ApplicationContext context = new ClassPathXmlApplicationContext("SpringContext.xml");
     private OrderService service = (OrderService) context.getBean("storageService");
 
-
+    public void setId(String s){
+        orderId = Long.parseLong(s);
+    }
 
     public List<Order> getOrders(){
         return service.getOrders();
     }
 
     public List<OrderDetails> getDetails(){
-        Long orderId = Long.valueOf(1);
+//        String s = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("orderId");
+//        orderId = Long.parseLong(s);
+        orderId = Long.valueOf(1);
         return service.getOrderDetails(orderId);
     }
 
