@@ -1,4 +1,18 @@
-﻿create TABLE orderTable 
+﻿-- PotgreSql--
+
+CREATE ROLE taptigin LOGIN
+  ENCRYPTED PASSWORD '123'
+  SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+
+CREATE DATABASE students
+  WITH OWNER = taptigin
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Russian_Russia.1251'
+       LC_CTYPE = 'Russian_Russia.1251'
+       CONNECTION LIMIT = -1;
+
+create TABLE orderTable
 (ID bigint primary key not null, CustomerName varchar(80),
  CustomerAddress varchar(80),TotalAmount int,
  CreatedDate date);
