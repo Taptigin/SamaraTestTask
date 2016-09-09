@@ -12,6 +12,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.net.URL;
@@ -33,6 +34,7 @@ public class MainBean {
     private ApplicationContext context = new ClassPathXmlApplicationContext("SpringContext.xml");
     private OrderService service = (OrderService) context.getBean("storageService");
     String times;
+    List<OrderDto> list = new ArrayList<>();
 
     /**
      * a method of obtaining time from the web service
@@ -67,7 +69,8 @@ public class MainBean {
      * @return List order
      */
     public List<OrderDto> getOrders(){
-        return service.getOrders();
+        list = service.getOrders();
+        return list;
     }
 
     /**
@@ -77,6 +80,34 @@ public class MainBean {
     public List<OrderDetails> getDetails(){
 
         return service.getOrderDetails(orderId);
+    }
+
+    private List<OrderDto> selectedDataList;
+
+    // Actions -----------------------------------------------------------------------------------
+
+    public String getSelectedItems() {
+
+        // Get selected items.
+        selectedDataList = new ArrayList<OrderDto>();
+
+        for (OrderDto dataItem : list) {
+            if (dataItem.isSelected()) {
+                selectedDataList.add(dataItem);
+                dataItem.setSelected(false); // Reset.
+
+            }
+        }
+
+        // Do your thing with the MyData items in List selectedDataList.
+
+        return "selected"; // Navigation case.
+    }
+
+    // Getters -----------------------------------------------------------------------------------
+
+    public List<OrderDto> getSelectedDataList() {
+        return selectedDataList;
     }
 
 
