@@ -1,5 +1,6 @@
 package com.mycomp.dao;
 
+import com.mycomp.dto.OrderDto;
 import com.mycomp.models.Order;
 import com.mycomp.models.OrderDetails;
 
@@ -15,7 +16,7 @@ public interface OrderDao {
      * receiving orders
      * @return collection contains the orders type Order
      */
-    public List<Order> getOrders();
+    public List<OrderDto> getOrders();
     /**
      * receiving order details
      * @return collection contains the detail of orders type OrderDerails

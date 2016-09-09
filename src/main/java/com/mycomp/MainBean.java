@@ -1,5 +1,6 @@
 package com.mycomp;
 
+import com.mycomp.dto.OrderDto;
 import com.mycomp.models.Order;
 import com.mycomp.models.OrderDetails;
 import com.mycomp.service.OrderService;
@@ -65,7 +66,7 @@ public class MainBean {
      * the method of receiving orders from the database
      * @return List order
      */
-    public List<Order> getOrders(){
+    public List<OrderDto> getOrders(){
         return service.getOrders();
     }
 

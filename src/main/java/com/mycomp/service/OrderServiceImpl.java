@@ -1,6 +1,7 @@
 package com.mycomp.service;
 
 import com.mycomp.dao.OrderDao;
+import com.mycomp.dto.OrderDto;
 import com.mycomp.models.Order;
 import com.mycomp.models.OrderDetails;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class OrderServiceImpl implements OrderService {
      * @see OrderService
      * @return
      */
-    public List<Order> getOrders() {
+    public List<OrderDto> getOrders() {
 
         return dao.getOrders();
     }
