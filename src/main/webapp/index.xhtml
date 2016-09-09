@@ -32,13 +32,13 @@
 
          <h:form>
             <br/>
-            <h:dataTable value="#{mainBean.orders}" var="order" border="1">
+            <h:dataTable value="#{mainBean.orders}" var="order" border="1" style="text-align: center">
                <h:column>
                   <f:facet name="header"><h:outputText value="Заказ" /></f:facet>
                   Имя заказчика:  #{order.customerName}.  Адрес заказчика:  #{order.customerAddress}.  Сумма заказа: #{order.totalAmount}.  Дата заказа: #{order.createdDate}.
                    Номер заказа: #{mainBean.id = order.id}
                   <h:selectBooleanCheckbox value="#{order.selected}" />
-                  <h:dataTable value="#{mainBean.details}" var="detail" border="1">
+                  <h:dataTable value="#{mainBean.details}" var="detail" border="1" style="text-align: center">
                      <h:column>
                         <f:facet name="header">Имя товара</f:facet>
                         #{detail.productName}
