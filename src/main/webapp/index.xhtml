@@ -9,11 +9,20 @@
    <f:view>
       <h:head>
          <title>Samara test</title>
+         <style type="text/css">
+            body{
+               margin: 0;
+               background-image: url(background.jpg);
+               background-repeat: no-repeat;
+               background-size: cover;
+            }
+         </style>
 
       </h:head>
 
       <h:body>
 
+      <br/>
 
       <h:form id="time">
          <h:outputLabel value="#{mainBean.time}"/>
@@ -22,6 +31,7 @@
 
 
          <h:form>
+            <br/>
             <h:dataTable value="#{mainBean.orders}" var="order" border="1">
                <h:column>
                   <f:facet name="header"><h:outputText value="Заказ" /></f:facet>

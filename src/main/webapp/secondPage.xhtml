@@ -6,14 +6,34 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+    <h:head>
+        <title>Samara test</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+                background-image: url(background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+
+    </h:head>
+    <h:body>
+    <h:outputLabel value="Выделенные заказы."/>
+
     <h:form>
-        <h:dataTable value="#{mainBean.selectedDataList}" var="item">
+        <br/>
+        <h:dataTable value="#{mainBean.selectedDataList}" var="item" border="2">
             <h:column>
-                <f:facet name="header">qqqq</f:facet>
+                <f:facet name="header">Имя заказчика</f:facet>
                 <h:inputText value="#{item.customerName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Дата заказа</f:facet>
+                <h:inputText value="#{item.createdDate}"/>
             </h:column>
         </h:dataTable>
     </h:form>
+    </h:body>
 </f:view>
 </html>

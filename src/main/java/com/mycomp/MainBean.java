@@ -99,10 +99,7 @@ public class MainBean {
             }
         }
 
-        // Do your thing with the MyData items in List selectedDataList.
-        for (int i = 0; i < selectedDataList.size(); i++) {
-            System.out.println(selectedDataList.get(i).toString());
-        }
+
         return "secondPage"; // Navigation case.
     }
 
